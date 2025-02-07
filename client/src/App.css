@@ -1,0 +1,54 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif; /* Example font */
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-results {
+  width: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white; /* Important: Set background color */
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.search-results li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* Add separator lines */
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+}
+
+.student-details {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 400px) {
+  input[type="text"],
+  .search-results {
+    width: 90%; /* Make input and results wider on smaller screens */
+  }
+}
