@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  font-family: sans-serif; /* Example font */
+  font-family: sans-serif;
 }
 
 input[type="text"] {
@@ -23,15 +23,15 @@ input[type="text"] {
   margin: 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: white; /* Important: Set background color */
-  max-height: 200px; /* Set a maximum height */
-  overflow-y: auto; /* Enable scrolling if needed */
+  background-color: white;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .search-results li {
   padding: 10px;
   cursor: pointer;
-  border-bottom: 1px solid #eee; /* Add separator lines */
+  border-bottom: 1px solid #eee;
 }
 
 .search-results li:hover {
@@ -45,10 +45,10 @@ input[type="text"] {
   border-radius: 5px;
 }
 
-/* Responsive Design (Example) */
+/* Responsive Design  */
 @media (max-width: 400px) {
   input[type="text"],
   .search-results {
-    width: 90%; /* Make input and results wider on smaller screens */
+    width: 90%;
   }
 }
