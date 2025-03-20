@@ -5,7 +5,7 @@ import "./App.css";
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [selectedStudent, setSelectedStudent] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,7 +47,7 @@ const App = () => {
   };
 
   const handleStudentSelect = (student) => {
-    setSelectedStudent(student);
+    setSelectedStudent([...selectedStudent, student]);
     setSearchResults([]);
     setSearchTerm("");
   };
@@ -88,13 +88,13 @@ const App = () => {
         </ul>
       )}
 
-      {selectedStudent && (
-        <div className="student-details">
-          <h2>{selectedStudent.name}</h2>
-          <p>Class: {selectedStudent.class}</p>
-          <p>Roll Number: {selectedStudent.rollNumber}</p>
+      {selectedStudent?.map((item) => (
+        <div className="student-details" key={item.rollNumber}>
+          <h2>{item.name}</h2>
+          <p>Class: {item.class}</p>
+          <p>Roll Number: {item.rollNumber}</p>
         </div>
-      )}
+      ))}
     </div>
   );
 };
